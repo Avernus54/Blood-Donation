@@ -1,0 +1,152 @@
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: 650px;
+
+        background-position: left center;
+    }
+
+    .hero-container {
+        justify-content: center;
+
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 520px;
+
+        text-align: center;
+
+        padding: 35px 25px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-info {
+        justify-content: center;
+    }
+}
+@media (max-width: 500px) {
+
+    .hero {
+        min-height: 700px;
+
+        background-position: left center;
+    }
+
+    .hero-container {
+        padding: 30px 15px;
+    }
+
+    .hero-content {
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+    .hero-info {
+        gap: 20px;
+    }
+}
+/* =========================
+   FEATURES RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .features {
+        padding: 70px 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .features {
+        padding: 60px 15px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .feature-card {
+        padding: 25px;
+    }
+}
+/* =========================
+   BLOOD TYPES RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .blood-types {
+        padding: 70px 20px;
+    }
+
+    .blood-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .blood-types {
+        padding: 60px 15px;
+    }
+
+    .blood-types-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+    .blood-type-card {
+        padding: 20px 10px;
+    }
+
+    .blood-type-card h3 {
+        font-size: 24px;
+    }
+
+}
