@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BloodCare | Appointments</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="appointment-page">
+
+    <!-- Background -->
+    <div class="appointment-background"></div>
+
+
+    <!-- Navigation -->
+    <nav class="appointment-navbar">
+
+        <div class="appointment-nav-container">
+
+            <a href="index.html" class="appointment-logo">
+                <span>🩸</span>
+                <strong>BloodCare</strong>
+            </a>
+
+            <div class="appointment-nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="user.html">Donor Registration</a>
+
+                <a href="donations.html">Donation Records</a>
+
+                <a href="inventory.html">Blood Inventory</a>
+
+                <a href="requests.html">Blood Requests</a>
+
+                <a href="appointments.html" class="active">
+                    Appointments
+                </a>
+
+            </div>
+
+            <a href="login.html" class="appointment-login">
+                Login
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="appointment-main">
+
+        <div class="appointment-card">
+
+            <!-- Heading -->
+            <div class="appointment-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        DONATION SCHEDULE
+                    </span>
+
+                    <h1>
+                        Donor <span>Appointments</span>
+                    </h1>
+
+                    <p>
+                        Schedule and manage blood donation appointments
+                        for registered donors.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="add-appointment-btn"
+                    onclick="openAppointmentForm()"
+                >
+                    + New Appointment
+                </button>
+
+            </div>
+
+
+            <!-- Summary -->
+            <div class="appointment-summary">
+
+                <div class="appointment-summary-box">
+
+                    <div class="appointment-summary-icon">
+                        📅
+                    </div>
+
+                    <div>
+                        <span>Total Appointments</span>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="appointment-summary-box pending">
+
+                    <div class="appointment-summary-icon">
+                        ⏳
+                    </div>
+
+                    <div>
+                        <span>Pending</span>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="appointment-summary-box confirmed">
+
+                    <div class="appointment-summary-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>Confirmed</span>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="appointment-summary-box completed">
+
+                    <div class="appointment-summary-icon">
+                        ❤️
+                    </div>
+
+                    <div>
+                        <span>Completed</span>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Search and Filters -->
+            <div class="appointment-tools">
+
+                <div class="appointment-search">
+
+                    <span>🔍</span>
+
+                    <input
+                        type="text"
+                        placeholder="Search donor name..."
+                    >
+
+                </div>
+
+
+                <select class="appointment-filter">
+
+                    <option value="">
+                        All Dates
+                    </option>
+
+                    <option value="today">
+                        Today
+                    </option>
+
+                    <option value="week">
+                        This Week
+                    </option>
+
+                    <option value="month">
+                        This Month
+                    </option>
+
+                </select>
+
+
+                <select class="appointment-filter">
+
+                    <option value="">
+                        All Status
+                    </option>
+
+                    <option value="pending">
+                        Pending
+                    </option>
+
+                    <option value="confirmed">
+                        Confirmed
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                    <option value="cancelled">
+                        Cancelled
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Appointment Table -->
+            <div class="appointment-table-wrapper">
+
+                <table class="appointment-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Appointment ID</th>
+
+                            <th>Donor</th>
+
+                            <th>Blood Type</th>
+
+                            <th>Date</th>
+
+                            <th>Time</th>
+
+                            <th>Purpose</th>
+
+                            <th>Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <!-- Sample Record -->
+
+                        <tr>
+
+                            <td>
+                                APT-001
+                            </td>
+
+                            <td>
+
+                                <div class="appointment-person">
+
+                                    <div class="appointment-avatar">
+                                        JD
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Juan Dela Cruz
+                                        </strong>
+
+                                        <small>
+                                            DON-001
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="appointment-blood-badge">
+                                    O+
+                                </span>
+
+                            </td>
+
+                            <td>
+                                September 25, 2026
+                            </td>
+
+                            <td>
+                                9:00 AM
+                            </td>
+
+                            <td>
+                                Blood Donation
+                            </td>
+
+                            <td>
+
+                                <span class="appointment-status confirmed-status">
+                                    Confirmed
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="appointment-action view"
+                                    title="View"
+                                >
+                                    👁
+                                </button>
+
+                                <button
+                                    class="appointment-action edit"
+                                    title="Edit"
+                                >
+                                    ✎
+                                </button>
+
+                                <button
+                                    class="appointment-action delete"
+                                    title="Delete"
+                                >
+                                    🗑
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Empty State -->
+
+                        <!--
+                        <tr>
+                            <td colspan="8" class="appointment-empty">
+                                No appointments found.
+                            </td>
+                        </tr>
+                        -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Pagination -->
+            <div class="appointment-pagination">
+
+                <span>
+                    Showing 1–1 of 1 appointments
+                </span>
+
+                <div>
+
+                    <button disabled>
+                        Previous
+                    </button>
+
+                    <button class="current-appointment-page">
+                        1
+                    </button>
+
+                    <button disabled>
+                        Next
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- New Appointment Modal -->
+    <div
+        class="appointment-modal"
+        id="appointmentModal"
+    >
+
+        <div class="appointment-modal-card">
+
+            <!-- Modal Header -->
+            <div class="appointment-modal-header">
+
+                <div>
+
+                    <h2>
+                        New Appointment
+                    </h2>
+
+                    <p>
+                        Schedule a blood donation appointment.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="appointment-modal-close"
+                    onclick="closeAppointmentForm()"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- Form -->
+            <form>
+
+                <div class="appointment-form-row">
+
+                    <div class="appointment-form-group">
+
+                        <label for="donorName">
+                            Donor Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="donorName"
+                            placeholder="Enter donor name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="appointment-form-group">
+
+                        <label for="donorId">
+                            Donor ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="donorId"
+                            placeholder="e.g. DON-001"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="appointment-form-row">
+
+                    <div class="appointment-form-group">
+
+                        <label for="appointmentDate">
+                            Appointment Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="appointmentDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="appointment-form-group">
+
+                        <label for="appointmentTime">
+                            Appointment Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="appointmentTime"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="appointment-form-row">
+
+                    <div class="appointment-form-group">
+
+                        <label for="appointmentBlood">
+                            Blood Type
+                        </label>
+
+                        <select
+                            id="appointmentBlood"
+                            required
+                        >
+
+                            <option value="">
+                                Select blood type
+                            </option>
+
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="appointment-form-group">
+
+                        <label for="appointmentPurpose">
+                            Purpose
+                        </label>
+
+                        <select
+                            id="appointmentPurpose"
+                            required
+                        >
+
+                            <option value="">
+                                Select purpose
+                            </option>
+
+                            <option>
+                                Blood Donation
+                            </option>
+
+                            <option>
+                                Regular Donation
+                            </option>
+
+                            <option>
+                                Emergency Donation
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="appointment-form-group">
+
+                    <label for="appointmentNotes">
+                        Notes
+                    </label>
+
+                    <textarea
+                        id="appointmentNotes"
+                        rows="3"
+                        placeholder="Enter additional notes..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="appointment-modal-buttons">
+
+                    <button
+                        type="button"
+                        class="appointment-cancel-btn"
+                        onclick="closeAppointmentForm()"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="appointment-submit-btn"
+                    >
+                        Schedule Appointment
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="appointment-footer">
+
+        <p>
+            © 2026 BloodCare — Blood Donation Management System
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function openAppointmentForm() {
+
+            document
+                .getElementById("appointmentModal")
+                .classList.add("show");
+
+        }
+
+
+        function closeAppointmentForm() {
+
+            document
+                .getElementById("appointmentModal")
+                .classList.remove("show");
+
+        }
+
+
+        window.onclick = function(event) {
+
+            const modal =
+                document.getElementById("appointmentModal");
+
+            if (event.target === modal) {
+
+                closeAppointmentForm();
+
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

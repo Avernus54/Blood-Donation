@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BloodCare | Blood Inventory</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="inventory-page">
+
+    <!-- Background -->
+    <div class="inventory-background"></div>
+
+
+    <!-- Navigation -->
+    <nav class="inventory-navbar">
+
+        <div class="inventory-nav-container">
+
+            <a href="index.html" class="inventory-logo">
+                <span>🩸</span>
+                <strong>BloodCare</strong>
+            </a>
+
+            <div class="inventory-nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="user.html">Donor Registration</a>
+
+                <a href="donations.html">Donation Records</a>
+
+                <a href="inventory.html" class="active">
+                    Blood Inventory
+                </a>
+
+                <a href="requests.html">
+                    Blood Requests
+                </a>
+
+            </div>
+
+            <a href="login.html" class="inventory-login">
+                Login
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main -->
+    <main class="inventory-main">
+
+        <div class="inventory-card">
+
+            <!-- Heading -->
+            <div class="inventory-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        BLOOD STORAGE
+                    </span>
+
+                    <h1>
+                        Blood <span>Inventory</span>
+                    </h1>
+
+                    <p>
+                        Monitor available blood units and their current
+                        inventory status.
+                    </p>
+
+                </div>
+
+                <button class="add-inventory-btn">
+                    + Add Blood Unit
+                </button>
+
+            </div>
+
+
+            <!-- Inventory Summary -->
+            <div class="inventory-summary">
+
+                <div class="inventory-summary-box">
+
+                    <div class="inventory-summary-icon">
+                        🩸
+                    </div>
+
+                    <div>
+                        <span>Total Units</span>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-summary-box available">
+
+                    <div class="inventory-summary-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>Available</span>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-summary-box low">
+
+                    <div class="inventory-summary-icon">
+                        !
+                    </div>
+
+                    <div>
+                        <span>Low Stock</span>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-summary-box critical">
+
+                    <div class="inventory-summary-icon">
+                        ⚠
+                    </div>
+
+                    <div>
+                        <span>Critical</span>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Blood Type Cards -->
+            <div class="inventory-blood-grid">
+
+                <div class="inventory-blood-card">
+
+                    <div class="inventory-blood-type">
+                        A+
+                    </div>
+
+                    <div class="inventory-blood-info">
+
+                        <strong>0 units</strong>
+
+                        <span>Available</span>
+
+                    </div>
+
+                    <div class="inventory-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <small>
+                        Stock Level: Empty
+                    </small>
+
+                </div>
+
+
+                <div class="inventory-blood-card">
+
+                    <div class="inventory-blood-type">
+                        A-
+                    </div>
+
+                    <div class="inventory-blood-info">
+
+                        <strong>0 units</strong>
+
+                        <span>Available</span>
+
+                    </div>
+
+                    <div class="inventory-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <small>
+                        Stock Level: Empty
+                    </small>
+
+                </div>
+
+
+                <div class="inventory-blood-card">
+
+                    <div class="inventory-blood-type">
+                        B+
+                    </div>
+
+                    <div class="inventory-blood-info">
+
+                        <strong>0 units</strong>
+
+                        <span>Available</span>
+
+                    </div>
+
+                    <div class="inventory-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <small>
+                        Stock Level: Empty
+                    </small>
+
+                </div>
+
+
+                <div class="inventory-blood-card">
+
+                    <div class="inventory-blood-type">
+                        B-
+                    </div>
+
+                    <div class="inventory-blood-info">
+
+                        <strong>0 units</strong>
+
+                        <span>Available</span>
+
+                    </div>
+
+                    <div class="inventory-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <small>
+                        Stock Level: Empty
+                    </small>
+
+                </div>
+
+
+                <div class="inventory-blood-card">
+
+                    <div class="inventory-blood-type">
+                        AB+
+                    </div>
+
+                    <div class="inventory-blood-info">
+
+                        <strong>0 units</strong>
+
+                        <span>Available</span>
+
+                    </div>
+
+                    <div class="inventory-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <small>
+                        Stock Level: Empty
+                    </small>
+
+                </div>
+
+
+                <div class="inventory-blood-card">
+
+                    <div class="inventory-blood-type">
+                        AB-
+                    </div>
+
+                    <div class="inventory-blood-info">
+
+                        <strong>0 units</strong>
+
+                        <span>Available</span>
+
+                    </div>
+
+                    <div class="inventory-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <small>
+                        Stock Level: Empty
+                    </small>
+
+                </div>
+
+
+                <div class="inventory-blood-card">
+
+                    <div class="inventory-blood-type">
+                        O+
+                    </div>
+
+                    <div class="inventory-blood-info">
+
+                        <strong>0 units</strong>
+
+                        <span>Available</span>
+
+                    </div>
+
+                    <div class="inventory-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <small>
+                        Stock Level: Empty
+                    </small>
+
+                </div>
+
+
+                <div class="inventory-blood-card">
+
+                    <div class="inventory-blood-type">
+                        O-
+                    </div>
+
+                    <div class="inventory-blood-info">
+
+                        <strong>0 units</strong>
+
+                        <span>Available</span>
+
+                    </div>
+
+                    <div class="inventory-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <small>
+                        Stock Level: Empty
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- Inventory Table -->
+            <div class="inventory-table-section">
+
+                <div class="inventory-table-heading">
+
+                    <div>
+                        <h2>Inventory Records</h2>
+
+                        <p>
+                            Detailed list of stored blood units.
+                        </p>
+                    </div>
+
+                    <div class="inventory-search">
+
+                        🔍
+
+                        <input
+                            type="text"
+                            placeholder="Search blood type..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-table-wrapper">
+
+                    <table class="inventory-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Blood ID</th>
+
+                                <th>Blood Type</th>
+
+                                <th>Donation Date</th>
+
+                                <th>Expiration Date</th>
+
+                                <th>Quantity</th>
+
+                                <th>Status</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <!-- Sample Record -->
+
+                            <tr>
+
+                                <td>
+                                    BLOOD-001
+                                </td>
+
+                                <td>
+                                    <span class="inventory-type-badge">
+                                        O+
+                                    </span>
+                                </td>
+
+                                <td>
+                                    September 20, 2026
+                                </td>
+
+                                <td>
+                                    October 25, 2026
+                                </td>
+
+                                <td>
+                                    450 mL
+                                </td>
+
+                                <td>
+
+                                    <span class="inventory-status available-status">
+                                        Available
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button class="inventory-action view">
+                                        👁
+                                    </button>
+
+                                    <button class="inventory-action delete">
+                                        🗑
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Empty State -->
+
+                            <!--
+                            <tr>
+                                <td colspan="7" class="inventory-empty">
+                                    No blood inventory records found.
+                                </td>
+                            </tr>
+                            -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <!-- Inventory Note -->
+            <div class="inventory-note">
+                <span>💡</span>
+                <p>
+                    Blood units should be monitored regularly to help
+                    maintain sufficient and safe blood supplies.
+                </p>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="inventory-footer">
+        <p>
+            © 2026 BloodCare — Blood Donation Management System
+        </p>
+    </footer>
+</body>
+</html>
